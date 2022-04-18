@@ -100,7 +100,9 @@ Route::get('/deleteAllTeacher/{Id}',[AllTeacher::class,'deleteAllTeacher'])->nam
 //add Student
 Route::get('/addStudent',[HomeController::class,'addStudent'])->name('addStudent');
 Route::post('/createStudent',[AddStudent::class,'create'])->name('createStudent');
-
+Route::post('/updateAllStudent',[AllStudent::class,'updateAllStudent'])->name('updateAllStudent');
+Route::get('/editAllStudent/{Id}',[AllStudent::class,'editAllStudent'])->name('editAllStudent');
+Route::get('/deleteAllStudent/{Id}',[AllStudent::class,'deleteAllStudent'])->name('delete');
 
 
 //contact us

@@ -11,7 +11,7 @@
             <table class="table text-center">
                 <thead>
                   <tr>
-                    <th scope="col" > Id</th>
+                    <th scope="col" >Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
@@ -23,12 +23,12 @@
                 <tbody>
                   <tr>
                     <td><input class="btn border-none" type="text" value="{{ $allStudents->id }}"></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->name }}" readonly></td>
-                    <td><input class="btn border-none" type="email" value="{{ Auth::user()->email }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->contact }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->gender }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->bday }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->belt }}" readonly></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::User()->name }}" readonly></td>
+                    <td><input class="btn border-none" type="email" value="{{ Auth::User()->email }}" readonly></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::User()->contact }}" readonly></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::User()->gender }}" readonly></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::User()->bday }}" readonly></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::User()->belt }}" readonly></td>
                     <td><button class="btn btn-primary" type="submit">Submit</button></td>
                   </tr>
                 </tbody>
