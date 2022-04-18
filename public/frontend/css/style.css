@@ -1,0 +1,74 @@
+
+/* user/Aboutus */
+.footer {
+    color: rgb(204, 204, 204);
+    background:rgb(76, 90, 125);
+  }
+  .img-responsive {
+    height: 150px;
+    width: 150px;
+  }
+  .img-responsive1 {
+    height: 100px;
+    margin-top: 40px;
+  }
+  .img-responsive2 {
+    height: 220px;
+    margin-top: -15px;
+  }
+
+  /* user/main */
+  .imageLOGObg {
+    background-color: rgb(238, 164, 18);
+  }
+
+  .tb {
+    width: 70% !important;
+    margin: auto !important;
+  }
+
+  .flex {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+
+  .week {
+    flex: 3;
+  }
+
+  .evening {
+    flex: 3;
+  }
+
+  .morning {
+    flex: 3;
+  }
+
+  .footer {
+    color: rgb(204, 204, 204);
+    background:center center no-repeat
+      rgb(76, 90, 125);
+  }
+
+
+  .detailsBOX {
+    width: 180px;
+  }
+
+  /* user/UpcomingCompetation */
+
+  .upcomingcompetationBOX {
+    margin-top: 20px;
+    height: auto;
+
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    text-align: center;
+  }
+  .abc {
+    width: 800px !important;
+  }
+
+/* Authentication/login */
+
