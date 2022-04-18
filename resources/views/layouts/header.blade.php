@@ -66,9 +66,6 @@
                                     >Upcoming Competation</a
                                     >
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="/allRanking">Ranking</a>
-                                </li>
                                 </ul>
                             </li>
                 
@@ -92,7 +89,7 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li>
-                                    <a class="dropdown-item" href="">My Profile</a>
+                                    <a class="dropdown-item" href="{{ route('profile.show') }}">My Profile</a>
                                     </li>
                                     <li>
                                     <a class="dropdown-item" href="/addTeacher">Add Teacher</a>
@@ -139,7 +136,7 @@
                                                     <a class="dropdown-item" href="/allEvents">Upcoming Competation</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="/allRanking">Ranking</a>
+                                                    <a class="dropdown-item" href="{{ route('belt') }}">Ranking</a>
                                                 </li>
                                                 </ul>
                                             </li>
@@ -148,7 +145,7 @@
                                                 <a href="{{ route('allStudent') }}" class="nav-link fs-5">Student Details</a>
                                             </li>
                                             <li class="nav-item px-2">
-                                                <a href="/allAttendance" class="nav-link fs-5">Attendance</a>
+                                                <a href="{{ route('date') }}" class="nav-link fs-5">Attendance</a>
                                             </li>
                                             <li class="nav-item px-2">
                                                 <a href="/aboutUs" class="nav-link fs-5">About Us</a>
@@ -166,7 +163,7 @@
                                                 </a>
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                     <li>
-                                                    <a class="dropdown-item" href="">My Profile</a>
+                                                    <a class="dropdown-item" href="{{ route('profile.show') }}">My Profile</a>
                                                     </li>
                                                     <li>
                                                     <a class="dropdown-item" href="/addStudent">Add Student</a>
@@ -208,7 +205,7 @@
                                                     >
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="/allRanking">Ranking</a>
+                                                    <a class="dropdown-item" href="{{ route('belt') }}">Ranking</a>
                                                 </li>
                                                 </ul>
                                             </li>
@@ -239,12 +236,12 @@
                                                 </a>
                                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                 <li>
-                                                    <a class="dropdown-item" href="upcomingcompetation.html"
+                                                    <a class="dropdown-item" href="{{ route('profile.show') }}"
                                                     >My Profile</a
                                                     >
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="upcomingcompetation.html"
+                                                    <a class="dropdown-item" href=""
                                                     >Payment</a
                                                     >
                                                 </li>

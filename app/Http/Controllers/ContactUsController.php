@@ -18,6 +18,7 @@ class ContactUsController extends Controller
         $contactus->Email = $request->Email;
         $contactus->Message = $request->Message;
         $contactus->save();
+        return back()->with('message', 'Contact Sent Successfully');
     }
     public function all() {
         $users= ContactUs::all();

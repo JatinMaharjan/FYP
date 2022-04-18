@@ -33,8 +33,4 @@ class AllTeacher extends Controller
         return view('frontend.Teacher.allTeacher', compact('allTeacher'));
     }
 
-    // public function allStudent(){
-    //     $users = User::where ('role', 'Student')->get();
-    //     return view('frontend.admin.ranking.allRanking', ['users' =>$users]);
-    // }
 }

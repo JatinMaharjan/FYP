@@ -23,10 +23,10 @@
                   <tr>
                     <td><input class="btn border-none" type="text" value="{{ $allTeachers->id }}"></td>
                     <td><input class="btn border-none" type="text" value="{{ Auth::user()->name }}" readonly></td>
-                    <td><input class="btn border-none" type="email" value="{{ Auth::user()->email }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->contact }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->gender }}" readonly></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->bday }}" readonly></td>
+                    <td><input class="btn border-none" type="email" value="{{ Auth::user()->email }}" ></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->contact }}" ></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->gender }}" ></td>
+                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->bday }}" ></td>
                     <td><button class="btn btn-primary" type="submit">Submit</button></td>
                   </tr>
                 </tbody>

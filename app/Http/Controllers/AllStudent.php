@@ -25,10 +25,10 @@ class AllStudent extends Controller
     }
     public function editAllStudent($id){
         $allStudent = User::find($id);
-        return view('frontend.Student.allStudent', compact('allStudent'));
+        return view('frontend.Student.editAllStudent', compact('allStudent'));
     }
-    
-    public function allStudent($users){
+
+    public function allStudent(){
         $users = User::where ('role', 'Student')->get();
         $ranking = Ranking::all();
         return view('frontend.Student.allStudent', compact('users', 'ranking'));

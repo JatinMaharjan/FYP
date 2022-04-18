@@ -53,17 +53,17 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 //ranking routes
+
 Route::get('/get_users/{id}',[RankingController::class,'get_users'])->name('get_users'); 
-
-
 Route::get('/addRanking',[RankingController::class,'index'])->name('add');
 
 Route::post('/createRanking',[RankingController::class,'create'])->name('createRanking');
 Route::post('/updateRanking',[RankingController::class,'updateRanking'])->name('updateRanking');
-Route::get('/allRanking',[RankingController::class,'all'])->name('allRanking');
+// Route::get('/allRanking',[RankingController::class,'all'])->name('allRanking');
 Route::get('/editRanking/{rankingId}',[RankingController::class,'editRanking'])->name('editRanking');
 Route::get('/deleteRanking/{rankingId}',[RankingController::class,'deleteRanking'])->name('delete');
 
+Route::get('/searchRanking', [HomeController::class, 'belt'])->name('belt');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -78,6 +78,8 @@ Route::get('/editAttendance/{id}',[AttendanceController::class,'editAttendance']
 Route::post('/updateAttendance',[AttendanceController::class,'updateAttendance'])->name('updateAttendance');
 Route::get('/deleteAttendance/{id}',[AttendanceController::class,'deleteAttendance'])->name('delete');
 
+Route::get('/searchAttendance', [HomeController::class, 'date'])->name('date');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -89,7 +91,7 @@ Route::get('/addTeacher',[HomeController::class,'addTeacher'])->name('addTeacher
 Route::post('/createTeacher',[AddTeacher::class,'create'])->name('createTeacher');
 
 //all Teacher(To see teacher Details)
-Route::get('/allTeacher',[AllTeacher::class,'allTeacher'])->name('allTeacher');
+Route::get('/allTeacher', [AllTeacher::class,'allTeacher'])->name('allTeacher');
 Route::post('/createTeacher',[AddTeacher::class,'create'])->name('createTeacher');
 
 Route::post('/updateAllTeacher',[AllTeacher::class,'updateAllTeacher'])->name('updateAllTeacher');
@@ -100,7 +102,7 @@ Route::get('/deleteAllTeacher/{Id}',[AllTeacher::class,'deleteAllTeacher'])->nam
 //add Student
 Route::get('/addStudent',[HomeController::class,'addStudent'])->name('addStudent');
 Route::post('/createStudent',[AddStudent::class,'create'])->name('createStudent');
-Route::post('/updateAllStudent',[AllStudent::class,'updateAllStudent'])->name('updateAllStudent');
+Route::post('/update',[AllStudent::class,'updateAllStudent'])->name('updateAllStudent');
 Route::get('/editAllStudent/{Id}',[AllStudent::class,'editAllStudent'])->name('editAllStudent');
 Route::get('/deleteAllStudent/{Id}',[AllStudent::class,'deleteAllStudent'])->name('delete');
 
