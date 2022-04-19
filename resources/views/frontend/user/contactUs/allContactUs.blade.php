@@ -1,14 +1,17 @@
 @extends('layouts.main')
 
 @section('content')
-<section class="mb-4 mt-5 pt-5 bg-dark">
+<section class="mb-4 pt-5">
     <div class="container text-center text-light mt-5 pt-5 mb-5">
 
-        <div class="text-dark mt-5 ">
-          <h3>Contact Us</h3>
+        <div class="text-dark">
+          <h3>Contact Us Details</h3>
+        </div>
+        <div class="text-secondary text-center">
+            <h5>These are the Student's Feedback about Our Association, Teachers.</h5>
         </div>
         
-        <div class="mt-5 pt-5 ">
+        <div class=" pt-5 ">
           <table class="table">
             <thead>
               <tr>

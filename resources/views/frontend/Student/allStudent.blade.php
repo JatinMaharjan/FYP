@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container text-center text-light mt-5 mb-5">
+<div class="container text-center text-light pt-5 mb-5">
 
     <div class="text-dark mt-5 pt-5">
       <h3>Manage Students</h3>

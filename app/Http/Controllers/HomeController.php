@@ -2,9 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMail;
 use App\Models\Attendance;
 use App\Models\Ranking;
+use App\Models\User;
+// use App\Notifications\InvoicePaid;
 use Illuminate\Http\Request;
+// use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\message;
+use Illuminate\Notifications\Notification as NotificationsNotification;
+
+// use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -54,5 +63,24 @@ class HomeController extends Controller
         return view('frontend.admin.Attendance.allAttendance', compact('attendances'));
     }
 
+
+    // mailing ko lagi!!
+
+    // public function message($user)
+    // {
+    //     $user = User::all();
+    //     Mail::send($user, new WelcomeMail);
+    // }
+
+    // Send Notification
+
+    public function notification($user){
+        $user = User::all();
+        Notification::send($user, new message);
+        // Notification::send($user, new InvoicePaid);
+        return redirect()->route('home');
+    }
+
+    
     
 }

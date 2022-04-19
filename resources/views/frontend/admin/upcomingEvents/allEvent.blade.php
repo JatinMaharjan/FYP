@@ -10,11 +10,16 @@
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     text-align: center;
+
+    /* background-image:{{ url('frontend/image/arena.jpg') }};
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
   }
     </style>
 
-    <div class="container upcomingcompetationBOX text-center mt-5 pt-5">
-        <div class="mt-4 ">
+    <div class="container upcomingcompetationBOX text-center  mt-5 pt-5">
+        <div class="mt-5 ">
             <h3>Upcoming Tournament</h3>
           </div>
           <div class="text-secondary ">

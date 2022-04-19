@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container text-center text-light mt-5 mb-5">
+<div class="container text-center text-light pt-5 mb-5">
 
     <div class="text-dark mt-5 pt-5">
       <h3>ChuniDevi Taekwondo Association</h3>
@@ -10,10 +10,14 @@
     <div class="text-secondary">
       <h4>Attendance of Our Students</h4>
     </div>
+    
     <form action="" class="p-4">
         <div class="row g-3">
             <div class="m-3 col-lg">
-                <label for="date" class="form-label text-dark">Attendance Date</label>
+                <label for="date" class="form-label fs-3 text-dark">Insert Date</label>
+                <div class="text-secondary text-center">
+                    <h5>Search the Attendance Details</h5>
+                </div>
                 <input type="date" class="form-control p-2" id="belt"
                     placeholder="Search date" name="search" />
 
@@ -25,8 +29,7 @@
             </div>
         </div>
     </form>
-    
-    <div class="mt-5 pt-5 ">
+    <div class="mt-3 pt-3 ">
       <table class="table">
 
         <thead>
@@ -63,5 +66,7 @@
         </tbody>
       </table>
     </div>
+
+    
   </div>
 @endsection

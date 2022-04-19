@@ -3,7 +3,7 @@
 @section('content')
 <div class="mt-5 pt-5"> 
 
-    <h3 class="text-center mt-4">Insert Details of the Student</h3>
+    <h3 class="text-center mt-5">Insert Belt of the Student</h3>
 
     {{-- <table>
         <thead>
@@ -23,7 +23,7 @@
     </table> --}}
 
 <div class="container">
-    <form action="{{ route('createRanking') }}" method="post" class="mt-5 pt-5">
+    <form action="{{ route('createRanking') }}" method="post" class="mt-3 pt-3 mb-5">
         @csrf
             <table class="table text-center">
                 <thead>

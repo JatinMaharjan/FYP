@@ -5,7 +5,7 @@
 <div class="container text-center mb-5 mt-5">
     <div class="container mb-5 mt-5 text-center" id="trainingTime">
       <div class="mb-5 pt-5">
-        <div class=" mb-5 mt-5">
+        <div class=" mb-3 mt-5">
           <h2>TRAINING TIME</h2>
         </div>
 

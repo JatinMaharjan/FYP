@@ -2,13 +2,13 @@
 
 @section('content')
 
-<div class="container text-center text-light mt-5 pt-5 mb-5">
+<div class="container text-center text-light mt-5 mb-5">
 
-    <div class="text-dark mt-5 ">
+    <div class="text-dark mt-5 pt-5">
       <h3>Manage Teacher</h3>
     </div>
     <div class="text-secondary">
-      <h4>Edit and Delete the detaile of Teacher</h4>
+      <h4>Edit and Delete the detaile of the Teacher</h4>
     </div>
     
     <div class="mt-5 pt-5 ">
@@ -25,17 +25,17 @@
           </tr>
         </thead>
         <tbody class="">
-            @foreach ($allTeachers as $allTeacher)                
+            @foreach ($user as $User)                
                 <tr>
-                    <td>{{ $allTeacher->id }}</td>
-                    <td>{{ $allTeacher->name }}</td>
-                    <td>{{ $allTeacher->email }}</td>
-                    <td>{{ $allTeacher->contact }}</td>
-                    <td>{{ $allTeacher->gender }}</td>
-                    <td>{{ $allTeacher->bday }}</td>
+                    <td>{{ $User->id }}</td>
+                    <td>{{ $User->name }}</td>
+                    <td>{{ $User->email }}</td>
+                    <td>{{ $User->contact }}</td>
+                    <td>{{ $User->gender }}</td>
+                    <td>{{ $User->bday }}</td>
                     <td>
-                        <a href="/editAllTeacher/{{ $allTeacher->Id }}" class="btn btn-primary">Edit</a>
-                        <a href="/deleteAllTeacher/{{ $allTeacher->Id }}" class="btn btn-danger">Delete</a>
+                        <a href="/editAllTeacher/{{ $User->id }}" class="btn btn-primary">Edit</a>
+                        <a href="/deleteAllTeacher/{{ $User->id }}" class="btn btn-danger">Delete</a>
                         </td>
                 </tr>          
             @endforeach

@@ -4,6 +4,7 @@ use App\Http\Controllers\AddStudent;
 use App\Http\Controllers\AddTeacher;
 use App\Http\Controllers\AllStudent;
 use App\Http\Controllers\AllTeacher;
+use App\Http\Controllers\AllTeacherController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\EventController;
@@ -11,7 +12,9 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NavController;
 use App\Http\Controllers\RankingController;
+use App\Mail\WelcomeMail;
 use App\Models\Carousel;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,12 +94,12 @@ Route::get('/addTeacher',[HomeController::class,'addTeacher'])->name('addTeacher
 Route::post('/createTeacher',[AddTeacher::class,'create'])->name('createTeacher');
 
 //all Teacher(To see teacher Details)
-Route::get('/allTeacher', [AllTeacher::class,'allTeacher'])->name('allTeacher');
+Route::get('/allTeacher', [AllTeacherController::class,'all'])->name('allTeacher');
 Route::post('/createTeacher',[AddTeacher::class,'create'])->name('createTeacher');
 
-Route::post('/updateAllTeacher',[AllTeacher::class,'updateAllTeacher'])->name('updateAllTeacher');
-Route::get('/editAllTeacher/{Id}',[AllTeacher::class,'editAllTeacher'])->name('editAllTeacher');
-Route::get('/deleteAllTeacher/{Id}',[AllTeacher::class,'deleteAllTeacher'])->name('delete');
+Route::post('/updateAllTeacher',[AllTeacherController::class,'updateAllTeacher'])->name('updateAllTeacher');
+Route::get('/editAllTeacher/{Id}',[AllTeacherController::class,'editAllTeacher'])->name('editAllTeacher');
+Route::get('/deleteAllTeacher/{Id}',[AllTeacherController::class,'deleteAllTeacher'])->name('delete');
 
 
 //add Student
@@ -119,3 +122,14 @@ Route::get('/allContactUs',[ContactUsController::class,'all'])->name('allContact
 // Route::get('/carousel',[CarouselController::class,'Carousel'])->name('addCarousel');
 Route::get('/addCarousel',[CarouselController::class,'index'])->name('addCarousel');
 Route::post('/createCarousel',[CarouselController::class,'create'])->name('createCarousel');
+
+
+//Mailing
+
+Route::get('/email{id}', function(){
+   
+});
+
+// Notification
+
+Route::get('/notification/{id}', [HomeController::class, 'notification'])->name('notification');

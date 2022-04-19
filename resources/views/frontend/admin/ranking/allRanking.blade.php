@@ -13,29 +13,14 @@
       <h5>See Your Positions</h5>
     </div>
 
-    <form action="" class="p-4">
-        <div class="row g-3">
-            <div class="m-3 col-lg">
-                <label for="belt" class="form-label text-dark">Belt</label>
-                <input type="search" class="form-control p-2" id="belt"
-                    placeholder="Search belt" name="search" />
-
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-primary bus-btn p-2">
-                    Search Belt &rarr;
-                </button>
-            </div>
-        </div>
-    </form>
-    
-    <div class="mt-5 pt-5 ">
+    <div class="mt-3 pt-5 ">
       <table class="table">
         <thead>
           <tr>
                 <th><strong><h5>Ranking Id</h5></strong></th>
                 <th ><strong><h5>User Id</h5></strong></th>
                 <th ><strong><h5>Belt</h5></strong></th>
+                <th ><strong><h5>Action</h5></strong></th>
           </tr>
         </thead>
         <tbody class="text-dark">
@@ -74,6 +59,22 @@
         </tbody>
       </table>
     </div>
+    <form action="" class="p-4">
+        <div class="row g-3">
+            <div class="col-4"></div>
+            <div class="m-3 col-lg-4">
+                <label for="belt" class="form-label fs-4 text-dark"> Search Belt</label>
+                <input type="search" class="form-control p-2" id="belt"
+                    placeholder="Search belt" name="search" />
+
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary bus-btn p-2">
+                    Search Belt &rarr;
+                </button>
+            </div>
+        </div>
+    </form>
   </div>
  
 @endsection

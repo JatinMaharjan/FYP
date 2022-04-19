@@ -9,7 +9,7 @@
         <h3>Attendance of Students.</h3>
     </div>
     <div class="text-secondary text-center">
-        <h5>Do Attendance of the Students.</h5>
+        <h5>Do Attendance of the Students Everyday.</h5>
     </div>
 
     <form action="{{ route('createAttendance') }}" method="post" class="mt-5 pt-5">

@@ -95,10 +95,13 @@
                                     <a class="dropdown-item" href="/addTeacher">Add Teacher</a>
                                     </li>
                                     <li>
-                                    <a class="dropdown-item" href="{{ route('allTeacher') }}">Manage Teacher Details</a>
+                                    <a class="dropdown-item" href="">Manage Teacher Details</a>
                                     </li>
                                     <li>
                                     <a class="dropdown-item" href="/addEvents">Add Competation</a>
+                                    </li>
+                                    <li>
+                                    <a class="dropdown-item" href="/notification/{id}">Payment Notification</a>
                                     </li>
                                     <li>
                                     <a class="dropdown-item" href="/allContactUs">Manage ContactUs</a>

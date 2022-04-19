@@ -2,11 +2,14 @@
 
 @section('content')
 <div class="mt-5 pt-5">
-    <div class="text-center mt-4">
+    <div class="text-center mt-5">
         <h3>Add Teacher</h3>
     </div>
+    <div class="text-secondary text-center">
+        <h5>Insert New Teacher Details</h5>
+    </div>
 
-    <form action="{{ route('createTeacher') }}" method="post" class="mt-5 pt-5">
+    <form action="{{ route('createTeacher') }}" method="post" class="mt-4 pt-5">
         @csrf
 
         <div class="container">
