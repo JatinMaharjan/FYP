@@ -1,38 +1,65 @@
-@extends('layouts.main')
 
-@section('content')
+<head>
+    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+</head>
+<body>
+    <button id="payment-button">Pay with Khalti</button>
+    <script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_1b7d130c7a364c4eb91f0d6a12106b59",
+            "productIdentity": "1234567890",
+            "productName": "Payment",
+            "productUrl": "http://127.0.0.1:8000/payment",
+            "paymentPreference": [
+                "KHALTI",
+                "EBANKING",
+                "MOBILE_BANKING",
+                "CONNECT_IPS",
+                "SCT",
+                ],
+            "eventHandler": {
+                onSuccess (payload) {
+                    // hit merchant api for initiating verfication
+                    console.log(payload);
+                    if(payload.idx){
+                        $.ajaxSetup({
+                            header: {
+                                'X-CSRF-TOKEN': '{{ csrf_token()}}'
+                            }
+                        });
+                        $.ajax({
+                            method: 'post',
+                            url: "{{ route('ajax.khalti.verify_order') }}",
+                            data: payload,
 
-<div class="mt-5 pt-5">
+                            success: function(response){
+                                if(response.success == 1){
+                                    window.location = response.redirecto;
+                                }else{
+                                    checkout.hide();
+                                }
+                            },
+                            error: function(data){
+                                console.log('Error:', data);
+                            }
+                        });
+                    }
+                },
+                onError (error) {
+                    console.log(error);
+                },
+                onClose () {
+                    console.log('widget is closing');
+                }
+            }
+        };
 
-
-    <div class="mt-5 text-center">
-        <h3>Payment</h3>
-    </div>
-
-    <form action="{{ route('') }}" method="post" class="mt-5 pt-5">
-        @csrf
-        <div class="container">
-            <table class="table text-center">
-                <thead>
-                  <tr>
-                    <th scope="col" >User Name</th>
-                    <th scope="col">Contact</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input class="btn border-none" type="text"></td>
-                    <td><input class="btn border-none" type="text"></td>
-                    <td><input class="btn border-none" type="text"></td>
-                    <td><input class="btn border-none" type="date"></td>
-                    <td><button class="btn btn-primary" type="submit">Paypal</button></td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
-    </form> 
-</div>
-@endsection
+        var checkout = new KhaltiCheckout(config);
+        var btn = document.getElementById("payment-button");
+        btn.onclick = function () {
+            // minimum transaction amount must be 10, i.e 1000 in paisa.
+            checkout.show({amount: 1000});
+        }
+    </script>
+</body>

@@ -244,7 +244,7 @@
                                                     >
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href=""
+                                                    <a class="dropdown-item" href="/payment"
                                                     >Payment</a
                                                     >
                                                 </li>

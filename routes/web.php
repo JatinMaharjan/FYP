@@ -133,3 +133,10 @@ Route::get('/email{id}', function(){
 // Notification
 
 Route::get('/notification/{id}', [HomeController::class, 'notification'])->name('notification');
+
+// Payment khalti
+
+Route::post('khalt/verify',[HomeController::class, 'verify'])->name('ajax.khalti.verify_order');
+
+Route::get('payments', [HomeController::class, 'payments'])->name('payments');
+Route::get('/payment', [HomeController::class, 'payment'])->name('payment');
