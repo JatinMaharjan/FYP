@@ -21,12 +21,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><input class="btn border-none" type="text" value="{{ $allTeachers->id }}"></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->name }}" readonly></td>
-                    <td><input class="btn border-none" type="email" value="{{ Auth::user()->email }}" ></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->contact }}" ></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->gender }}" ></td>
-                    <td><input class="btn border-none" type="text" value="{{ Auth::user()->bday }}" ></td>
+                    <td><input class="btn border-none" name="id" type="text" value="{{ $allTeacher->id }}"></td>
+                    <td><input class="btn border-none" name="name" type="text" value="{{ $allTeacher->name }}" readonly></td>
+                    <td><input class="btn border-none" name="email" type="email" value="{{$allTeacher->email }}" ></td>
+                    <td><input class="btn border-none" name="contact" type="text" value="{{ $allTeacher->contact }}" ></td>
+                    <td><input class="btn border-none" name="gender" type="text" value="{{ $allTeacher->gender }}" ></td>
+                    <td><input class="btn border-none" name="bday" type="text" value="{{ $allTeacher->bday }}" ></td>
                     <td><button class="btn btn-primary" type="submit">Submit</button></td>
                   </tr>
                 </tbody>

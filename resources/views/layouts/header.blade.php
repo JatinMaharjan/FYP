@@ -95,7 +95,7 @@
                                     <a class="dropdown-item" href="/addTeacher">Add Teacher</a>
                                     </li>
                                     <li>
-                                    <a class="dropdown-item" href="">Manage Teacher Details</a>
+                                    <a class="dropdown-item" href="/allTeacher">Manage Teacher Details</a>
                                     </li>
                                     <li>
                                     <a class="dropdown-item" href="/addEvents">Add Competation</a>
@@ -105,6 +105,9 @@
                                     </li>
                                     <li>
                                     <a class="dropdown-item" href="/allContactUs">Manage ContactUs</a>
+                                    </li>
+                                    <li>
+                                    <a class="dropdown-item" href="/">Manage Home Slider</a>
                                     </li>
                                     <li class="">
                                         <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form-a').submit();">Log Out</a>
@@ -244,8 +247,7 @@
                                                     >
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="/payment"
-                                                    >Payment</a
+                                                    <a class="dropdown-item" href="{{ route('payment') }}">Payment</a
                                                     >
                                                 </li>
                                                 <li class="">

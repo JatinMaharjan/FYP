@@ -25,7 +25,7 @@
           </tr>
         </thead>
         <tbody class="">
-            @foreach ($user as $User)                
+            @foreach ($allTeacher as $User)                
                 <tr>
                     <td>{{ $User->id }}</td>
                     <td>{{ $User->name }}</td>

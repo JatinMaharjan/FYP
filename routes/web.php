@@ -136,7 +136,9 @@ Route::get('/notification/{id}', [HomeController::class, 'notification'])->name(
 
 // Payment khalti
 
-Route::post('khalt/verify',[HomeController::class, 'verify'])->name('ajax.khalti.verify_order');
-
-Route::get('payments', [HomeController::class, 'payments'])->name('payments');
+// Route::post('khalt/verify',[HomeController::class, 'verify'])->name('ajax.khalti.verify_order');
 Route::get('/payment', [HomeController::class, 'payment'])->name('payment');
+Route::post('/khaltipayment', [HomeController::class, 'khaltiPayment'])->name('khaltiPayment');
+
+// Route::get('payments', [HomeController::class, 'payments'])->name('payments');
+// Route::get('/payment', [HomeController::class, 'payment'])->name('payment');

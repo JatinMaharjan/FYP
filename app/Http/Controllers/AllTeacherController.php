@@ -25,11 +25,11 @@ class AllTeacherController extends Controller
     }
     public function editAllTeacher($id){
         $allTeacher = User::find($id);
-        return view('frontend.Teacher.allTeacher', compact('allTeacher'));
+        return view('frontend.Teacher.editAllTeacher', compact('allTeacher'));
     }
 
     public function all() {
-        $allTeacher= User::all();
+        $allTeacher = User::where ('role', 'Teacher')->get();
         return view('frontend.Teacher.allTeacher', compact('allTeacher'));
     }
 
@@ -41,6 +41,6 @@ class AllTeacherController extends Controller
         $allTeacher->gender = $request->gender;
         $allTeacher->bday = $request->bday;
         $allTeacher->save();
-        return back()->with('message','Teacher Updated successfully.');
+        return redirect()->route('allTeacher');
     }
 }
