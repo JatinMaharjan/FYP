@@ -12,49 +12,62 @@
     <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
 </head>
     <body>
+    @extends('layouts.main')
 
-        <div class="container-fluid">
+    @section('content')
+
+        <div class=" mt-5 pt-5">
             <form action="{{ route('payment') }}" method="post">
                 @csrf
-                <div class="payment-container justify-content-center">
-
-                    <div class="basic-container m-4 p-2">
-                        <h3>Basic Details</h3>
-                        <hr>
-                        <div class="flex">
+                <div class=" ">
+                    <div class="text-center mt-5">
+                        <h3 class="">Your Payment Details</h3>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="container">
+                        
+                        <div class=" mt-5">
                             <input type="hidden" class="user_id" name="user_id" value="{{ Auth::user()->id }}">
-                            <div class="mb-3 right">
-                                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                <input type="text" class="form-control name" id="exampleFormControlInput1" name="name"
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" class="form-control name mt-1" id="exampleFormControlInput1" name="name"
                                     placeholder="Enter Name" value="{{ Auth::user()->name }}" readonly />
-                            </div>
-                            <div class="mb-3 right">
-                                <label for="exampleFormControlInput1" class="form-label">Contact</label>
-                                <input type="text" class="form-control contact" id="exampleFormControlInput1" name="contact"
+                                </div>
+                                <div class="col-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Contact</label>
+                                    <input type="text" class="form-control contact mt-1" id="exampleFormControlInput1" name="contact"
                                     placeholder="Enter Contact Number" value="{{ Auth::user()->contact }}" readonly />
+                                </div>
                             </div>
-
-                            
                         </div>
+                        <div class="row">
+                            <div class="col-3">
 
-                        <div class="flex">
-                            <div class="mb-3 left">
-                                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input type="text" class="form-control email" id="exampleFormControlInput1" name="email"
+                            </div>
+                            <div class="col-3">
+                                <label for="exampleFormControlInput1" class="mt-4 form-label">Email</label>
+                                <input type="text" class="form-control email mt-1" id="exampleFormControlInput1" name="email"
                                     placeholder="Enter Email" value="{{ Auth::user()->email }}" readonly />
                             </div>
-                            <div class="mb-3 right">
-                                <label for="exampleFormControlInput1" class="form-label">Price</label>
-                                <input type="text" class="form-control price" id="exampleFormControlInput1" name="price"/>
+                            <div class="col-3">
+                                <label for="exampleFormControlInput1" class="mt-4 form-label">Price</label>
+                                <input type="text" class="form-control price mt-1" id="exampleFormControlInput1" name="price"/>
                             </div>
                         </div>
-
+                        
                     </div>
                 </div>
             </form>
         </div>
+        <div class="text-center mt-4 mb-5">
+            <button id="payment-button" class="btn btn-primary">Pay with Khalti</button>
+        </div>
+        
 
-        <button id="payment-button">Pay with Khalti</button>
+        
         <script>
             var config = {
                 // replace the publicKey with yours
@@ -131,5 +144,6 @@
                 checkout.show({amount: 1000});
             }
         </script>    
+        @endsection
     </body>
 </html>

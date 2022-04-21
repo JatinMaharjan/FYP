@@ -36,6 +36,16 @@ class CarouselController extends Controller
         $Carousel = Carousel::find($id);
         return view('frontend.admin.Attendance.editAttendance', compact('carousels'));
     }
+    public function updateCarousel(Request $request){
+        $Carousel = new Carousel();
+        $Carousel ->carouselid = $request->$carouselid;
+        $Carousel->img = $request->$img;
+        $Carousel->heading = $request->$heading;
+        $Carousel->subHeading = $request->$subHeading;
+        $Carousel->save();
+        return back()->with('message','Attendance added successfully.');
+    }
+
     // public function updateCarousel(Request $request){
     //     $img = $request->file;
     //     $imageName=time().'.'.$img->getClientoriginalExtension();

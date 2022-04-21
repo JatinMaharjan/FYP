@@ -10,4 +10,9 @@ class Carousel extends Model
     use HasFactory;
 
     protected $table= 'carousel';
+    protected $primaryKey = "id";
+
+    public function user(){
+        return $this->belongsTo(User::class, 'id');
+    }
 }

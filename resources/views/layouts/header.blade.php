@@ -260,7 +260,17 @@
                                             </li>
                             @endif
                             @else
-                                <li class="nav-item dropdown px-2">
+                            <div class="" style="margin-right: 20px">
+                                <a type="button" href="/login" class="btn btn-outline-warning">Login</a>
+                            </div>
+                            <div>
+                                <a type="button" href="/register" class="btn btn-outline-warning">Signup</a>
+                            </div>
+
+                            
+                            
+
+                                {{-- <li class="nav-item dropdown px-2">
                                     <a
                                     class="nav-link dropdown-toggle fs-5"
                                     href="#"
@@ -281,7 +291,7 @@
                                         <a class="dropdown-item" href="/register">Sign up</a>
                                     </li>
                                     </ul>
-                                </li>
+                                </li> --}}
                     @endauth
                 @endif
             </ul>
