@@ -121,6 +121,10 @@ class HomeController extends Controller
     // }
 
     public function Khaltipayment(Request $request){
+
+
+       
+
         $request->validate([
             
         ]);

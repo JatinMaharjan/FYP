@@ -26,6 +26,9 @@
                     name="name"
                     class="form-control"
                   />
+                  @error('name') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="md-form text-secondary mb-3">
                   <label for="name" class="">Contact</label>
@@ -35,6 +38,9 @@
                     name="contact"
                     class="form-control"
                   />
+                  @error('contact') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="md-form text-secondary mb-3">
                   <label for="name" class="">Email</label>
@@ -44,12 +50,18 @@
                     name="Email"
                     class="form-control"
                   />
+                  @error('email') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="md-form text-secondary mb-3">
                   <label for="name" class="">Message</label>
                   <textarea name="Message" id="" cols="30" rows="10" 
                   class="form-control md-textarea"></textarea>
                 </div>
+                @error('Message') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
 
                 <div class="text-center">
                   <button class="btn btn-primary">Submit &rarr;</button>

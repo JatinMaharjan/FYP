@@ -60,6 +60,9 @@
                         ext" name="userId" placeholder="UserId" > --}}
                     </td>
                     <td><input class="btn border-none" type="text" name="belt" placeholder="Belt" ></td>
+                    @error('belt') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     <td><button class="btn btn-primary" type="submit">Submit</button></td>
 
 

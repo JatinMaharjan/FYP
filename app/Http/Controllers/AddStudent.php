@@ -8,6 +8,16 @@ use Illuminate\Http\Request;
 class AddStudent extends Controller
 {
     public function create(Request $request) {
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'contact' => 'required',
+            'bday' => 'required',
+            'password' => 'required',
+
+        ]); 
+
         $addTeacher = new User();
         $addTeacher->name = $request->name;
         $addTeacher->email = $request->email;

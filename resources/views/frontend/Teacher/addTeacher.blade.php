@@ -20,6 +20,9 @@
                         <label for="name" class="">Name</label>
                         <input type="text" name="name" class="form-control">
                     </div>
+                    @error('name') 
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
             <div class="row">
@@ -29,11 +32,17 @@
                         <label for="name" class="">Email</label>
                         <input type="text" name="email"  class="form-control">
                     </div>
+                    @error('email') 
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="col-md-4">
                     <div class="md-form mb-3">
                         <label for="name" class="">Contact</label>
                         <input type="text" name="contact"  class="form-control">
+                        @error('contact') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -44,6 +53,9 @@
                         <label for="name" class="">Gender</label>
                         <input type="text" name="gender"  class="form-control">
                     </div>
+                    @error('gender') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
             </div>
             <div class="row">
@@ -53,6 +65,9 @@
                         <label for="name" class="">Birth Day</label>
                         <input type="date" name="bday"  class="form-control">
                     </div> 
+                    @error('bday') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
             </div>
             <div class="row">
@@ -62,6 +77,9 @@
                         <label for="name" class="">Password</label>
                         <input type="password" name="password"  class="form-control">
                     </div> 
+                    @error('password') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
             </div>
             <div class="text-center">

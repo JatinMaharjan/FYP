@@ -17,6 +17,13 @@ class RankingController extends Controller
 
     public function create(Request $request)
     {
+
+        $request->validate([
+            'belt' => 'required',
+
+        ]); 
+
+
         $rankings = new Ranking();
         $rankings->userId = $request->userId;
         $rankings->belt = $request->belt;

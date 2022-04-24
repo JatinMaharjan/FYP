@@ -12,6 +12,15 @@ class EventController extends Controller
     }
 
     public function create(Request $request) {
+
+        $request->validate([
+            'tournamentName' => 'required',
+            'from' => 'required',
+            'to' => 'required',
+            'venue' => 'required',
+
+        ]); 
+
         $event = new Event();
         $event->tournamentName = $request->tournamentName;
         $event->from = $request->from;

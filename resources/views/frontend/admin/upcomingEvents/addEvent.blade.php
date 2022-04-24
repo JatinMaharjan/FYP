@@ -20,6 +20,9 @@
                         <label for="name" class="">Tournament Name</label>
                         <input class="form-control" type="text" name="tournamentName" placeholder="Insert Tournament Name" id="">
                     </div>
+                    @error('tournamentName') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
             </div>
             <div class="row">
@@ -29,12 +32,18 @@
                         <label for="name" class="">Tournament Start Date</label>
                         <input class="form-control" type="date" name="from" placeholder="from" id="">
                     </div>
+                    @error('from') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
                 <div class="col-md-4">
                     <div class="md-form mb-3">
                         <label for="name" class="">Tournament End Date</label>
                         <input class="form-control" type="date" name="to" placeholder="to" id="">
                     </div>
+                    @error('to') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
             </div>
             <div class="row">
@@ -44,6 +53,9 @@
                         <label for="name" class="">Venu</label>
                         <input class="form-control" type="text" name="venue" placeholder="venue" id="">
                     </div>
+                    @error('venue') 
+                        <span class="text-danger">{{ $message }}</span>
+                        @enderror
                 </div>
             </div>
             

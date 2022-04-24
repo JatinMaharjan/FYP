@@ -12,6 +12,15 @@ class ContactUsController extends Controller
     // }
 
     public function create(Request $request) {
+
+        $request->validate([
+            'name' => 'required',
+            'contact' => 'required',
+            'email' => 'required',
+            'Message' => 'required',
+
+        ]); 
+
         $contactus = new ContactUs();
         $contactus->name = $request->name;
         $contactus->contact = $request->contact;
