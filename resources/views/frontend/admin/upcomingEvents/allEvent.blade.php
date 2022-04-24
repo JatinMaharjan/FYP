@@ -1,22 +1,92 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChuniDevi Taekwondo Association</title>
 
-@section('content')
+    <link href='{{ url('frontend/css/main.css') }}' rel='stylesheet' />
+<script src='{{ url('frontend/js/main.js') }}'></script>
+<script>
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      initialDate: '2020-09-12',
+      navLinks: true, 
+      selectable: true,
+      selectMirror: true,
+      select: function(arg) {
+        var title = prompt('Event Title:');
+        if (title) {
+          calendar.addEvent({
+            title: title,
+            start: arg.start,
+            end: arg.end,
+            allDay: arg.allDay
+          })
+        }
+        calendar.unselect()
+      },
+      eventClick: function(arg) {
+        if (confirm('Are you sure you want to delete this event?')) {
+          arg.event.remove()
+        }
+      },
+      editable: true,
+      dayMaxEvents: true, 
+      events: [
+        {
+          
+        },
+        ]
+    });
+    calendar.render();
+  });
+
+</script>
 <style>
+
+    body {
+      margin: 40px 10px;
+      padding: 0;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    .calendar{
+        text-decoration: none;
+    }
+  
+    #calendar {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
     .upcomingcompetationBOX {
     margin-top: 20px;
     height: auto;
-
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     text-align: center;
-
+}
     /* background-image:{{ url('frontend/image/arena.jpg') }};
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
-  }
-    </style>
+  
+  </style>
+</head>
+<body>
+    @extends('layouts.main')
+
+@section('content')
+
 
     <div class="container upcomingcompetationBOX text-center  mt-5 pt-5">
         <div class="mt-5 ">
@@ -31,8 +101,8 @@
             </h5>
           </div>
     
-        <div class="mt-5 pt-5 ">
-            <table class="table">
+        <div class="mt-5 pt-5 mb-5">
+            <table class="table ">
                 <thead class="thead-light">
                 <tr>
                     <th scope="col"><h5>S.No</h5></th>
@@ -216,5 +286,19 @@
             </table>
         </div>
     </div>
+
+
+    <div class="mt-5 text-center">
+        <h3 >Calendar</h3>
+    </div>
+
+    <div class="mt-5 mb-5">
+        <div id='calendar'></div>   
+    </div>
+     
     
 @endsection
+</body>
+</html>
+
+

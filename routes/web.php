@@ -121,7 +121,7 @@ Route::get('/allContactUs',[ContactUsController::class,'all'])->name('allContact
 //carousel
 // Route::get('/carousel',[CarouselController::class,'Carousel'])->name('addCarousel');
 Route::get('/addCarousel',[CarouselController::class,'index'])->name('addCarousel');
-Route::post('/createCarousel',[CarouselController::class,'create'])->name('createCarousel');
+Route::post('/createCarousel',[CarouselController::class,'createCarousel'])->name('createCarousel');
 
 
 //Mailing

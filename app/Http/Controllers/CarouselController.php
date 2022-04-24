@@ -9,6 +9,8 @@ class CarouselController extends Controller
 {
 
     public function createCarousel(Request $request) {
+
+        // dd($request);
         $request->validate([
             'heading' => 'required',
         ]); 
