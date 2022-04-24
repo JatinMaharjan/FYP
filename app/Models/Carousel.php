@@ -9,7 +9,7 @@ class Carousel extends Model
 {
     use HasFactory;
 
-    protected $table= 'carousel';
+    protected $table= 'carousels';
     protected $primaryKey = "id";
 
     public function user(){

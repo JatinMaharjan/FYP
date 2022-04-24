@@ -8,23 +8,38 @@ use Illuminate\Http\Request;
 class CarouselController extends Controller
 {
 
-    public function create(Request $request) {
+    public function createCarousel(Request $request) {
+        $request->validate([
+            'heading' => 'required',
+        ]); 
+
+       
 
         $Carousel= new Carousel();
-
-        $img = $request->file;
-        $imageName=time().'.'.$img->getClientoriginalExtension();
-        $request->file->move('img',$imageName);
-        $Carousel->img=$imageName;
+        $Carousel = $request->heading;
+        $Carousel = $request->subHeading;
+        if($request->hasfile('image'))
+        {
+        $file = $request->file('image');
+        $extention = $file->getClientOriginalExtension();
+        $filename = time().'.'.$extention;
+        $file->move('uploads/img/', $filename);
+        $Carousel->img = $filename;
+        }
+        $Carousel->save();
+        // $img = $request->file;
+        // $imageName=time().'.'.$img->getClientoriginalExtension();
+        // $request->file->move('img',$imageName);
+        // $Carousel->img=$imageName;
     }
 
     public function index(){
-        $Carousels= Carousel::all();
+        $carousels= Carousel::all();
         return view('frontend.admin.carousel.addCarousel', compact('carousels'));
     }
 
     public function all() {
-        $Carousels= Carousel::all();
+        $carousels= Carousel::all();
         return view('frontend.admin.carousel.allCarousel', compact('carousels'));
     }
 
@@ -33,16 +48,26 @@ class CarouselController extends Controller
         // return back()->with('message', 'Student deleted successfully.');
     }
     public function editCarousel($id){
-        $Carousel = Carousel::find($id);
-        return view('frontend.admin.Attendance.editAttendance', compact('carousels'));
+        $carousels = Carousel::find($id);
+        return view('frontend.admin.carousel.editCarousel', compact('carousels'));
     }
+
+
+    // public function updateAttendance(Request $request){
+    //     $attendance = Attendance::find($request->attendanceId);
+    //     $attendance->userId = $request->userId;
+    //     $attendance->date = $request->date;
+    //     $attendance->attendance = $request->attendance;
+    //     $attendance->save();
+    //     return back()->with('message', 'Attendance Updated Successfully.');
+    // }
     public function updateCarousel(Request $request){
-        $Carousel = new Carousel();
-        $Carousel ->carouselid = $request->$carouselid;
-        $Carousel->img = $request->$img;
-        $Carousel->heading = $request->$heading;
-        $Carousel->subHeading = $request->$subHeading;
-        $Carousel->save();
+        $Carousels = Carousel::find($request->carouselid);
+        $Carousels->carouselid = $request->carouselid;
+        $Carousels->img=$request->img;
+        // $Carousels->heading = $request->$heading;
+        // $Carousels->subHeading = $request->$subHeading;
+        $Carousels->save();
         return back()->with('message','Attendance added successfully.');
     }
 
