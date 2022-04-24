@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="container text-center text-light mt-5 mb-5">
+<div class="container text-center text-light mt-5 pt-5 mb-5">
 
-    <div class="text-dark mt-5 pt-5">
+    <div class="text-dark mt-5 ">
       <h3>Manage Teacher</h3>
     </div>
     <div class="text-secondary">

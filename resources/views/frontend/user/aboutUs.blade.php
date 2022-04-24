@@ -7,7 +7,7 @@
         <div class="col-md-8 offset-md-2 mt-4">
           <h2>About Us</h2>
           <br>
-          <p class="lead">
+          <p class="lead" style="text-align: justify">
             Nepal Taekwondo Association is an International Federation
             governing the sport of Taekwondo and is a member of Nepal Martial
             Arts Association with other two martial arts disciplines under the

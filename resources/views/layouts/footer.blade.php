@@ -41,9 +41,9 @@
             <div class="col-lg-6 col-md-6 mt-3">
               <div class="widget clearfix">
                 <div class="widget-title">
-                  <h4>About US</h4>
+                  <h4>About Us</h4>
                 </div>
-                <p>
+                <p class="" style="text-align:justify; " >
                   The Chunidevi Taekwondo Association was founded in 1969 in
                   Lalitpur, Nepal by Siva Hari Budathoke, a former National Player
                   in the Country Nepal. Budathoke's motivation was to establish a
