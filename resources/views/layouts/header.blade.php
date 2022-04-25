@@ -260,12 +260,22 @@
                                             </li>
                             @endif
                             @else
+                            <li class="nav-item px-2">
+                                <a href="/" class="nav-link fs-5">Home</a>
+                            </li>
+                
+                            <li class="nav-item px-2">
+                                <a href="/trainingTime" class="nav-link fs-5">Training Time</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a href="/aboutUs" class="nav-link fs-5">About Us</a>
+                            </li>
                             <div class="" style="margin-right: 20px">
                                 <a type="button" href="/login" class="btn btn-outline-warning">Login</a>
                             </div>
-                            <div>
+                            {{-- <div>
                                 <a type="button" href="/register" class="btn btn-outline-warning">Signup</a>
-                            </div>
+                            </div> --}}
 
                             
                             

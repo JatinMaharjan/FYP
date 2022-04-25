@@ -124,12 +124,12 @@
                             {{-- <div class="login-btn login-button">
                                 <button type="submit" class="btn btn-outline-primary">LOGIN</button>
                             </div> --}}
-                            <div class="text-center login-btn login-button mt-3">
+                            <div class="text-center login-btn login-button mt-3 mb-4">
                                 <button type="submit" class="btn loginSignupButton bg-danger">Login</button>
                             </div>
-                            <div class="text-center mb-4 mt-3">
+                            {{-- <div class="text-center mb-4 mt-3">
                                 <button type="button" class="btn loginSignupButton bg-danger">Sign Up</button>
-                            </div>
+                            </div> --}}
                         </form>
                     </div>
                 </div>

@@ -289,7 +289,7 @@
 
 
     <div class="mt-5 text-center">
-        <h3 >Calendar</h3>
+        <h3 >CALENDAR</h3>
     </div>
 
     <div class="mt-5 mb-5">
