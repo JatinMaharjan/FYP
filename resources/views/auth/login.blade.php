@@ -114,7 +114,7 @@
 
                             
                             <div class=" forgotPassword mb-5">
-                                <a href="#">Forgot Password</a>
+                                <a href="{{ route('password.request') }}">Forgot Password</a>
                             </div>
             
                             <div class="form-check mt-5">
