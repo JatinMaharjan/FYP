@@ -107,7 +107,7 @@
                                     <a class="dropdown-item" href="/allContactUs">ContactUs Details</a>
                                     </li>
                                     <li>
-                                    <a class="dropdown-item" href="/">Manage Home Slider</a>
+                                    <a class="dropdown-item" href="/addCarousel">Manage Home Slider</a>
                                     </li>
                                     <li class="">
                                         <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form-a').submit();">Log Out</a>
