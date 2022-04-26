@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="mt-5 pt-5">
-    <div class="text-center mt-4">
+    <div class="text-center mt-5">
         <h3>Insert Upcoming Tournaments</h3>
     </div>
     <div class="text-center text-secondary">

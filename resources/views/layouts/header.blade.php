@@ -104,7 +104,7 @@
                                     <a class="dropdown-item" href="/notification/{id}">Payment Notification</a>
                                     </li>
                                     <li>
-                                    <a class="dropdown-item" href="/allContactUs">Manage ContactUs</a>
+                                    <a class="dropdown-item" href="/allContactUs">ContactUs Details</a>
                                     </li>
                                     <li>
                                     <a class="dropdown-item" href="/">Manage Home Slider</a>

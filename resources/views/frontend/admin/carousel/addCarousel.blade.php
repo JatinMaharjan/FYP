@@ -40,11 +40,11 @@
 
 @section('content')
 <div class="mt-5 pt-5">
-    <div class="text-center mt-4">
-        <h3>Insert Upcoming Tournaments</h3>
+    <div class="text-center mt-5">
+        <h3>Insert Image and Add text for the Home Dashboard</h3>
     </div>
     <div class="text-center text-secondary">
-        <h5>These are the Upcoming Tournaments Which are going to take place soon!</h5>
+        <h5>Insert High Quality images for better view.</h5>
     </div>
 
     <form action="{{ route('createCarousel') }}" method="post" class="mt-5 pt-5" enctype="multipart/form-data">

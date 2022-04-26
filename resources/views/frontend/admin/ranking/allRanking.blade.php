@@ -20,7 +20,7 @@
                 <th><strong><h5>Ranking Id</h5></strong></th>
                 <th ><strong><h5>User Id</h5></strong></th>
                 <th ><strong><h5>Belt</h5></strong></th>
-                <th ><strong><h5>Action</h5></strong></th>
+                {{-- <th ><strong><h5>Action</h5></strong></th> --}}
           </tr>
         </thead>
         <tbody class="text-dark">

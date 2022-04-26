@@ -7,8 +7,11 @@
        
     @endif
     
-    <div class="text-center mt-4">
+    <div class="text-center mt-5">
         <h3>Edit Upcoming Tournaments</h3>
+    </div>
+    <div class="text-secondary text-center">
+        <h5>Edit the details of the Upcoming Tournament</h5>
     </div>
 
     <form action="{{ route('updateEvent') }}" method="POST" class="mt-5 pt-5">

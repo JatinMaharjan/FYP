@@ -11,7 +11,7 @@
       <h4>Edit and Delete the detaile of the student</h4>
     </div>
     
-    <div class="mt-5 pt-5 ">
+    <div class="mt-5">
       <table class="table">
         <thead>
           <tr>
