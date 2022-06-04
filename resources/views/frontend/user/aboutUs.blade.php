@@ -4,7 +4,7 @@
 <div class="section wb">
     <div class="container mt-5 pt-5">
       <div class="section-title row text-center">
-        <div class="col-md-8 offset-md-2 mt-4">
+        <div class="col-md-8 offset-md-2 mt-5">
           <h2>About Us</h2>
           <br>
           <p class="lead" style="text-align: justify">
