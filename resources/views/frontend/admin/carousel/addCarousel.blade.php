@@ -84,7 +84,7 @@
                 <div class="col-md-4">
                     <div class="md-form mb-3">
                         <label for="name" class="">Image</label>
-                        <input type="file" name="img" id="">
+                        <input type="file" name="file" id="">
                     </div>
                     {{-- @error('from') 
                         <span class="text-danger">{{ $message }}</span>

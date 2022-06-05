@@ -32,8 +32,9 @@
     </div>
     <div class="carousel-inner text-left">
       <div class="carousel-item active">
-        <img
-          src="{{ url('frontend/image/kyorugi3.jpg') }}"
+          @foreach ($homeSlider as $c)
+          <img
+          src="{{ url('img') }}/{{ $c->img }}"
           alt="..."
           class="w-100"
           style=" height: 45rem; background-size: cover; object-fit: cover; background-repeat: no-repeat;"/>
@@ -46,10 +47,12 @@
             during training
           </p>
           <a class="btn btn-warning text-center mb-5 mt-2" href="/contactUs" role="button">Contact Us</a>
+          @endforeach
+        
         </div>
       </div>
     
-      <div class="carousel-item">
+      {{-- <div class="carousel-item">
         <img
           src="{{ url('frontend/image/pum.jpg') }}"
           alt="..."
@@ -68,9 +71,9 @@
           </p>
           <a class="btn btn-warning text-center mb-5 mt-2" href="/contactUs" role="button">Contact Us</a>
         </div>
-      </div>
+      </div> --}}
     
-      <div class="carousel-item">
+      {{-- <div class="carousel-item">
         <img
           src="{{ url('frontend/image/promotion.jpg') }}"
           alt="..."
@@ -84,7 +87,7 @@
             The promotion exam is a tool to assist participants in their progress as skilled martial artists. It is not a competition with other people; it is a learning opportunity in which each individual displays their skills and receives feedback towards continual improvement.
           </p>
           <a class="btn btn-warning text-center mb-5 mt-2" href="/contactUs" role="button">Contact Us</a>
-        </div>
+        </div>--}}
       </div>
     </div>
     <button

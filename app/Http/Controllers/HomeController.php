@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\WelcomeMail;
 use App\Models\Attendance;
+use App\Models\Carousel;
 use App\Models\Payment;
 use App\Models\Ranking;
 use App\Models\User;
@@ -40,6 +41,11 @@ class HomeController extends Controller
         return view('frontend.user.contactUs');
     }
 
+
+    public function displayCarousel(){
+        $homeSlider= Carousel::all();
+        return view('frontend.user.home', compact('homeSlider'));
+    }
 
 
 

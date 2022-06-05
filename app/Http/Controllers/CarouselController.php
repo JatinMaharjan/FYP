@@ -18,16 +18,25 @@ class CarouselController extends Controller
        
 
         $Carousel= new Carousel();
-        $Carousel = $request->heading;
-        $Carousel = $request->subHeading;
-        if($request->hasfile('image'))
-        {
-        $file = $request->file('image');
-        $extention = $file->getClientOriginalExtension();
-        $filename = time().'.'.$extention;
-        $file->move('uploads/img/', $filename);
-        $Carousel->img = $filename;
-        }
+        $Carousel->heading = $request->heading;
+        $Carousel->subHeading = $request->subHeading;
+
+
+
+        // if($request->hasfile('img'))
+        // {
+        // $file = $request->file;
+        // $extention = $file->getClientOriginalExtension();
+        // $filename = time().'.'.$extention;
+        // $file->move('img/', $filename);
+        // $Carousel->img = $filename;
+        // }
+        // $Carousel->save();
+
+        $img = $request->file;
+        $imageName=time().'.'.$img->getClientoriginalExtension();
+        $request->file->move('img',$imageName);
+        $Carousel->img=$imageName;
         $Carousel->save();
         // $img = $request->file;
         // $imageName=time().'.'.$img->getClientoriginalExtension();
