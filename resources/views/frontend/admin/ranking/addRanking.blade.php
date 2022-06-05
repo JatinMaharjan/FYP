@@ -64,6 +64,7 @@
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
                     <td><button class="btn btn-primary" type="submit">Submit</button></td>
+                    
 
 
                     {{-- <td><input class="btn border-none" type="text" name="userId" id="userId" value="{{ Auth::user()->id }}" ></td>
@@ -101,5 +102,15 @@
     }
     })
     });
+
+
+    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                      
     </script>
 @endsection
