@@ -41,6 +41,6 @@ class AllTeacherController extends Controller
         $allTeacher->gender = $request->gender;
         $allTeacher->bday = $request->bday;
         $allTeacher->save();
-        return redirect()->route('allTeacher');
+        return back()->with('message', 'Teacher Edited successfully.');
     }
 }

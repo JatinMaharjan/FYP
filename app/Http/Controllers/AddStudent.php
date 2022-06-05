@@ -27,6 +27,6 @@ class AddStudent extends Controller
         $addTeacher->role = 'Student';
         $addTeacher->password = bcrypt($request->password);
         $addTeacher->save();
-        return redirect()->route('home');
+        return back()->with('message', 'Student added successfully.');
     }
 }

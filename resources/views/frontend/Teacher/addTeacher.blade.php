@@ -12,6 +12,14 @@
     <form action="{{ route('createTeacher') }}" method="post" class="mt-4 pt-5">
         @csrf
 
+        @if (Session::has('message'))
+            <script>
+                swal("Added!!", "{!! Session::get('message') !!}", "success", {
+                    button: "OK",
+                })
+            </script>
+        @endif
+
         <div class="container">
             <div class="row">
                 <div class="col-md-2"></div>
@@ -84,8 +92,10 @@
             </div>
             <div class="text-center">
                 <button class="btn btn-primary" type="submit">Submit</button>
+                
             </div>
         </div>
-    </form>    
+    </form>  
+
 </div>
 @endsection

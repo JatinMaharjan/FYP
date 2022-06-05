@@ -8,6 +8,13 @@
     </div>
     <form action="{{ route('updateAllTeacher') }}" method="POST" class="mt-5 pt-5">
         @csrf
+        @if (Session::has('message'))
+        <script>
+            swal("Added!!", "{!! Session::get('message') !!}", "success", {
+                button: "OK",
+            })
+        </script>
+    @endif
             <table class="table text-center">
                 <thead>
                   <tr>

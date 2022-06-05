@@ -25,6 +25,14 @@
 <div class="container">
     <form action="{{ route('createRanking') }}" method="post" class="mt-3 pt-3 mb-5">
         @csrf
+        @if (Session::has('message'))
+            <script>
+                swal("Added!!", "{!! Session::get('message') !!}", "success", {
+                    button: "OK",
+                })
+            </script>
+        @endif
+        
             <table class="table text-center">
                 <thead>
                   <tr>

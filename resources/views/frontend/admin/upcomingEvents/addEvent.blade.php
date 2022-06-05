@@ -12,6 +12,14 @@
     <form action="{{ route('createEvent') }}" method="post" class="mt-5 pt-5">
         @csrf
 
+        @if (Session::has('message'))
+            <script>
+                swal("Added!!", "{!! Session::get('message') !!}", "success", {
+                    button: "OK",
+                })
+            </script>
+        @endif
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-2"></div>

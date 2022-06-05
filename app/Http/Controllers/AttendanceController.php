@@ -8,12 +8,23 @@ use App\Models\User;
 
 class AttendanceController extends Controller
 {
+
+    
+
+
     public function index() {
         $users = User::where ('role', 'Student')->get();
         return view('frontend.admin.attendance.addAttendance',compact('users'));
     }
 
     public function create(Request $request) {
+
+        $request->validate([
+            'name' => 'required',
+            'date' => 'required',
+            'attendance' =>'required',
+        ]); 
+
         $attendance = new Attendance();
         $attendance->id = $request->attendanceId;
         $attendance->userId = $request->userId;

@@ -33,8 +33,16 @@
                         </select>
                         </select>
                     </td>
-                    <td><input class="btn border-none" type="date" name="date"></td>
-                    <td><input class="btn border-none" type="text" name="attendance"></td>
+                    <td><input class="btn border-none" type="date" name="date">@error('date') 
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror</td>
+                        
+                    <td><input class="btn border-none" type="text" name="attendance">
+                        @error('attendance') 
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </td>
+                        
                     <td><button class="btn btn-primary" type="submit">Submit</button></td>
                   </tr>
                 </tbody>

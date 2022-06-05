@@ -28,6 +28,7 @@ class EventController extends Controller
         $event->venue = $request->venue;
         $event->save();
         return back()->with('message','Event added successfully.');
+        
     }
 
     public function all() {

@@ -2,11 +2,7 @@
 @section('content')
 
 <div class="mt-5 pt-5">
-    @if (Session::has('message'))
-    <h1 class="text-danger mt-5 pt-5">{{ Session::get('message') }}</h1>
-       
-    @endif
-    
+        
     <div class="text-center mt-5">
         <h3>Edit Upcoming Tournaments</h3>
     </div>
@@ -16,7 +12,13 @@
 
     <form action="{{ route('updateEvent') }}" method="POST" class="mt-5 pt-5">
         @csrf
-
+        @if (Session::has('message'))
+            <script>
+                swal("Added!!", "{!! Session::get('message') !!}", "success", {
+                    button: "OK",
+                })
+            </script>
+        @endif
         <div class="container">
             <table class="table text-center">
                 <thead>

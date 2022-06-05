@@ -30,7 +30,7 @@ class AddTeacher extends Controller
         $addTeacher->role = 'Teacher';
         $addTeacher->password = bcrypt($request->password);
         $addTeacher->save();
-        return redirect()->route('home');
+        return back()->with('message', 'Teacher added successfully.');
         
     }
 }
