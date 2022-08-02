@@ -168,13 +168,13 @@
                         </div>
                         <div class="col-md-4">
                             
-                            <div class="col-4 mt-5">
+                            {{-- <div class="col-4 mt-5">
                                 <select class="form-select" name="role" aria-label="Default select example">
                                     <option selected>Select Role</option>
                                     <option value="T">Teacher</option>
                                     <option value="u">Student</option>
                                   </select>
-                            </div>
+                            </div> --}}
                             
                         </div>
                     </div>
