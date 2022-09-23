@@ -1,8 +1,8 @@
 <div class="bg-dark">
     <div class="imageLOGObg">
         <div class="container">
-            <div class="text-center mb-4 mt-4">
-                <h4><strong> We Are Affiliated With</strong></h4>
+            <div class="text-center mb-4 mt-5">
+                <h4 class="mt-4"><strong> We Are Affiliated With</strong></h4>
             </div>
     
             <div class="row img-fluid">

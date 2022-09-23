@@ -108,7 +108,7 @@
     </div>
     
     <!-- rules and regulation -->
-    {{-- <div class="">
+    <div class="">
       <div class="container text-light mt-5">
         <div class="section-title row text-center">
           <div class="">
@@ -181,7 +181,7 @@
         </div>
     
       </div>
-    </div> --}}
+    </div>
     
     <hr class="bg-white col-md-8 offset-2">
     
